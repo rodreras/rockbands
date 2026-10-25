@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rockbands"
+version = "0.1.0"
+description = "Sensor-agnostic band ratios and RGB composites for mineral exploration (ASTER, Sentinel-2, Landsat 4/5/7/8/9)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = [
+    "boto3>=1.42.97",
+    "matplotlib>=3.9.4",
+    "numpy>=1.22",
+    "planetary-computer>=1.0.0",
+    "pystac-client>=0.8.3",
+    "rioxarray>=0.15.0",
+]
+
+[project.optional-dependencies]
+xarray = ["xarray"]
+pandas = ["pandas"]
+plot = ["matplotlib"]
+notebooks = ["pystac-client", "odc-stac", "rioxarray", "matplotlib", "pandas", "boto3", "planetary-computer", "ipykernel"]
+dev = ["pytest", "xarray", "pandas", "matplotlib", "pystac-client", "odc-stac", "rioxarray", "nbclient", "nbformat", "ipykernel", "planetary-computer"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
