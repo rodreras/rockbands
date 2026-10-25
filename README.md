@@ -1,5 +1,9 @@
 # rockbands
 
+<p align="center">
+<img src="assets/logo.jpeg" width="300" height="321" alt="Description">
+</p>
+
 Band ratios and RGB composites for mineral exploration that run on **any satellite that has the bands**:
 Sentinel-2, Landsat 4/5/7/8/9 and ASTER. The ratios come from
 [awesome-mining-band-ratio](https://github.com/rodreras/awesome-mining-band-ratio); the standard band names
